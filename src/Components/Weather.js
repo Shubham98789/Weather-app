@@ -5,6 +5,7 @@ import rainIcon from '../Images/rain.png'
 import drizzleIcon from '../Images/drizzle.png'
 import cloudIcon from '../Images/cloud.png'
 import humidityIcon from '../Images/humidity.png'
+import fogIcon from '../Images/fog.png'
 import searchIcon from '../Images/search.png'
 import snowIcon from '../Images/snow.png'
 import windIcon from '../Images/wind.png'
@@ -56,6 +57,9 @@ const Weather = () => {
         }
         else if (data.weather[0].icon === "10d" || data.weather[0].icon === "10d") {
             setweatherIcon(thunderstormIcon);
+        }
+        else if (data.weather[0].icon === "50d" || data.weather[0].icon === "50d") {
+            setweatherIcon(fogIcon);
         }
         else {
             setweatherIcon(clearIcon);
