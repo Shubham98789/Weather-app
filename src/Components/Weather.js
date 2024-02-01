@@ -37,8 +37,8 @@ const Weather = () => {
         wind[0].innerHTML = Math.floor(data.wind.speed) + " Km/h";
         temperature[0].innerHTML = Math.floor(data.main.temp) + " °C";
         location[0].innerHTML = data.name;
-        maximumTemperature[0].innerHTML=Math.floor(data.main.temp_max) + "°C";
-        minimumTemperature[0].innerHTML=Math.floor(data.main.temp_min) + "°C";
+        maximumTemperature[0].innerHTML = Math.floor(data.main.temp_max) + "°C";
+        minimumTemperature[0].innerHTML = Math.floor(data.main.temp_min) + "°C";
 
         if (data.weather[0].icon === "01d" || data.weather[0].icon === "01d") {
             setweatherIcon(clearIcon);
@@ -67,53 +67,55 @@ const Weather = () => {
     }
 
     return (
-        <div className="container">
-            <div className="navbar">
-                <input type="text" className='searchBar' placeholder='Search Location' />
-                <div className="search" onClick={() => { Search() }}>
-                    <img src={searchIcon} id='searchIcon' alt="..." />
-                </div>
-            </div>
-            <div className="container1">
-                <div className="imageContainer">
-                    <div className="image">
-                        <img src={weatherIcon} id='weatherImg' alt="" />
+        <div className="body">
+            <div className="container">
+                <div className="navbar">
+                    <input type="text" className='searchBar' placeholder='Search Location' />
+                    <div className="search" onClick={() => { Search() }}>
+                        <img src={searchIcon} id='searchIcon' alt="..." />
                     </div>
-                    <div className="temperature">20°C</div>
-                    <div className="location">Delhi</div>
                 </div>
+                <div className="container1">
+                    <div className="imageContainer">
+                        <div className="image">
+                            <img src={weatherIcon} id='weatherImg' alt="" />
+                        </div>
+                        <div className="temperature">20°C</div>
+                        <div className="location">Delhi</div>
+                    </div>
 
-                <div className="tempContainer">
-                    <div className="maxTemperature" id='smallBox'>
-                        <img src={maxTempIcon} id='iconImg' alt="" />
-                        <div className="Data">
-                            <div className="maxTemp" id='data'>20°C</div>
-                            <div className="text1">Max Temp</div>
+                    <div className="tempContainer">
+                        <div className="maxTemperature" id='smallBox'>
+                            <img src={maxTempIcon} id='iconImg' alt="" />
+                            <div className="Data">
+                                <div className="maxTemp" id='data'>20°C</div>
+                                <div className="text1">Max Temp</div>
+                            </div>
+                        </div>
+                        <div className="minTemperature" id='smallBox'>
+                            <img src={minTempIcon} id='iconImg' alt="" />
+                            <div className="Data">
+                                <div className="minTemp" id='data'>20°C</div>
+                                <div className="text1">Min Temp</div>
+                            </div>
                         </div>
                     </div>
-                    <div className="minTemperature" id='smallBox'>
-                        <img src={minTempIcon} id='iconImg' alt="" />
+                </div>
+
+                <div className="container2">
+                    <div className="humidity" id='smallBox'>
+                        <img src={humidityIcon} id='iconImg' alt="" />
                         <div className="Data">
-                            <div className="minTemp" id='data'>20°C</div>
-                            <div className="text1">Min Temp</div>
+                            <div className="percent" id='data'>50%</div>
+                            <div className="text1">Humidity</div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div className="container2">
-                <div className="humidity" id='smallBox'>
-                    <img src={humidityIcon} id='iconImg' alt="" />
-                    <div className="Data">
-                        <div className="percent" id='data'>50%</div>
-                        <div className="text1">Humidity</div>
-                    </div>
-                </div>
-                <div className="wind" id='smallBox'>
-                    <img src={windIcon} id='iconImg' alt="" />
-                    <div className="Data">
-                        <div className="speed" id='data'>50%</div>
-                        <div className="text1">Wind</div>
+                    <div className="wind" id='smallBox'>
+                        <img src={windIcon} id='iconImg' alt="" />
+                        <div className="Data">
+                            <div className="speed" id='data'>50%</div>
+                            <div className="text1">Wind</div>
+                        </div>
                     </div>
                 </div>
             </div>

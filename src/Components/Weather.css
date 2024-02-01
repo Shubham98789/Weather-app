@@ -1,3 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.body{
+    background-color: rgb(250, 229, 109);
+    height: 702px;
+    padding-top: 10px;
+    
+}
 .container {
     height: 670px;
     width: 635px;
@@ -6,13 +16,19 @@
     border: 5px;
     border-color: black;
     border-radius: 23px;
-    background-image: linear-gradient(#6814e5,#0023ff,#7611dc);
     font-family: cursive;
+    background-image: url('../Images/bg3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(230, 224, 165);
 }
-.navbar{
+
+.navbar {
     display: flex;
 
 }
+
 .searchBar {
     display: flex;
     height: 58px;
@@ -24,6 +40,7 @@
     font-size: 20px;
     background-color: aliceblue;
 }
+
 .search {
     display: flex;
     height: 50px;
@@ -33,17 +50,20 @@
     padding: 5px;
     border-radius: 44px;
 }
+
 #searchIcon {
     height: 35px;
     width: 35px;
     padding: 7px;
 }
+
 .container1 {
     height: 50%;
     width: 100%;
     display: flex;
     gap: 80px;
 }
+
 .imageContainer {
     display: flex;
     justify-content: center;
@@ -53,17 +73,23 @@
     padding-top: 0px;
     height: 377px;
 }
-#weatherImg{
+
+#weatherImg {
     height: 200px;
 }
+
 .temperature {
     font-size: 92px;
     font-weight: bold;
     height: 30%;
 }
+
 .location {
     font-size: 45px;
+    color: gold;
+    font-weight: 800;
 }
+
 .tempContainer {
     width: 28%;
     display: flex;
@@ -71,6 +97,7 @@
     gap: 61px;
     padding-top: 57px;
 }
+
 .container2 {
     height: 34%;
     width: 100%;
@@ -78,12 +105,14 @@
     gap: 96px;
     padding-left: 34px;
 }
+
 #smallBox {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 36%;
 }
+
 #iconImg {
     mix-blend-mode: multiply;
     height: 96px;
@@ -95,7 +124,9 @@
     width: 321%;
     font-weight: bold;
 }
+
 .text1 {
     width: 208%;
     font-size: 20px;
-}  
+    color: goldenrod;
+}
